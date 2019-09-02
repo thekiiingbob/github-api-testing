@@ -5,6 +5,7 @@
 I decided to use cypress to execute these tests because...
 
 A) I wanted to try it out for API only testing
+
 B) it gives a nice GUI for debugging and executing the tests
 
 These sorta tests can be done with pretty much any http request library (for JS, I'd lean towards Axios and you can see a small example of that [here](https://github.com/thekiiingbob/minimal-api-testing)). There are of course plenty of other tools across many languages that could be used for this task.
@@ -19,7 +20,7 @@ To run, you should have `node` and `npm` installed on your machine
 
 ### Github Personal Token
 
-To circumvent some of the rate limiting, I used a [Github personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) to authenticate various requests. To do the same, in `cypress/cypress.json' you can update to`github_token` variable to be your own token. Without it, rate limiting may be a factor for you.
+To circumvent some of the rate limiting, I used a [Github personal access token](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line) to authenticate various requests. To do the same, in `cypress/cypress.json` you can update to`github_token` variable to be your own token. Without it, rate limiting may be a factor for you.
 
 Note that some of the tests have some assumptions around the repos that my user account can access/see in Github, so there may be failures with your own token as you would have different permissions. Ideally, in an actual testing setup, we would have control over the accounts we would use.
 
