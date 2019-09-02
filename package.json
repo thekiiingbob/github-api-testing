@@ -1,0 +1,25 @@
+{
+  "name": "github-api",
+  "version": "1.0.0",
+  "description": "Small example of testing the GitHub API with Cypress",
+  "scripts": {
+    "test": "npx cypress run",
+    "cypress:open": "npx cypress open",
+    "pretest:report": "rm -rf cypress/results/* || true",
+    "test:report": "npm test; npm run report:merge && npm run report:generate",
+    "report:merge": "npx mochawesome-merge --reportDir cypress/results > cypress/results/merged-mocha.json",
+    "report:generate": "npx mochawesome-report-generator cypress/results/merged-mocha.json --reportDir cypress/results/mochawesome-report"
+  },
+  "author": "Robert Lubecker",
+  "license": "ISC",
+  "devDependencies": {
+    "cypress": "^3.4.1",
+    "cypress-multi-reporters": "1.1.23",
+    "eslint": "^6.2.2",
+    "mocha": "^6.2.0",
+    "mochawesome": "^4.1.0",
+    "mochawesome-merge": "^2.0.1",
+    "mochawesome-report-generator": "^4.0.1",
+    "prettier": "^1.18.2"
+  }
+}
