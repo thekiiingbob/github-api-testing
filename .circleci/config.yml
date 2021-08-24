@@ -4,27 +4,27 @@ jobs:
       docker:
             - image: circleci/ruby:2.4
       steps:
-        - command: "echo 1"
+        - run: "echo 1"
     two:
       docker:
             - image: circleci/ruby:2.4
       steps:
-        - command: "echo 2"
+        - run: "echo 2"
     three:
       docker:
             - image: circleci/ruby:2.4
       steps:
-        - command: "echo 3"
+        - run: "echo 3"
     four:
       docker:
             - image: circleci/ruby:2.4
       steps:
-        - command: "echo 4"
+        - run: "echo 4"
     five:
       docker:
             - image: circleci/ruby:2.4
       steps:
-        - command: "echo 5"
+        - run: "echo 5"
 
 workflows:
     version: 2
